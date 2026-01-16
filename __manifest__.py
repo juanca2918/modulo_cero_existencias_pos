@@ -16,7 +16,7 @@
         'views/res_config_settings_views.xml',
     ],
     'assets': {
-        'point_of_sale.assets': [
+        'point_of_sale.assets_prod': [
             'modulo_cero_existencias_pos/static/src/js/pos_stock_restriction.js',
         ],
     },

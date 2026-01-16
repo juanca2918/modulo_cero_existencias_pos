@@ -14,6 +14,9 @@
                         <setting id="restrict_zero_stock_pos" help="Impide agregar productos con stock cero o negativo en el POS.">
                             <field name="restrict_zero_pos"/>
                         </setting>
+                        <setting id="stock_restriction_type_pos" help="Elige si validar contra stock físico o pronosticado.">
+                            <field name="stock_restriction_type" widget="radio"/>
+                        </setting>
                     </block>
                 </xpath>    
             </field>

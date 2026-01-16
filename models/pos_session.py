@@ -7,4 +7,5 @@ class ResCompany(models.Model):
     def _load_pos_data_fields(self, config_id):
         params = super()._load_pos_data_fields(config_id)
         params.append('restrict_zero_pos')
+        params.append('stock_restriction_type')
         return params
