@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form_inherit_stock_restriction_pos" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.stock.restriction.pos</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="100"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!-- POS Settings: Insert after 'PoS Interface' block -->
+                 <xpath expr="//block[@id='pos_interface_section']" position="after">
+                    <!-- Added app="point_of_sale" to appear in POS App Settings -->
+                    <block title="Restricciones de Stock" id="stock_restriction_pos_setting" app="point_of_sale">
+                        <setting id="restrict_zero_stock_pos" help="Impide agregar productos con stock cero o negativo en el POS.">
+                            <field name="restrict_zero_pos"/>
+                        </setting>
+                    </block>
+                </xpath>    
+            </field>
+        </record>
+    </data>
+</odoo>
